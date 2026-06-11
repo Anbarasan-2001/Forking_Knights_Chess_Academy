@@ -1,0 +1,118 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Breadcrumb / Page Header Start -->
+<div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url({% static 'website/assets/img/breadcrumb-bg.jpg' %});">
+    <div class="container">
+        <div class="gt-page-heading">
+            <div class="gt-breadcrumb-sub-title">
+                <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">Tournaments</h1>
+            </div>
+            <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li>
+                    <a href="{% url 'home' %}">Home</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    Tournaments
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Tournaments Section Start -->
+<section class="match-section fix section-padding">
+    <div class="container">
+        <div class="row g-4 tv-desti-content">
+            {% for tournament in tournaments %}
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="match-box-items tv-desti-item">
+                    <h3>{{ tournament.name }}</h3>
+                    <h4>{{ tournament.start_date|date:"d M Y" }} &ndash; {{ tournament.end_date|date:"d M Y" }}</h4>
+                    <p>{{ tournament.location }}</p>
+
+                    <ul class="tournament-meta">
+                        {% if tournament.start_time %}
+                        <li><i class="fa-solid fa-clock"></i> Time: <b>{{ tournament.start_time|time:"g:i A" }}{% if tournament.end_time %} &ndash; {{ tournament.end_time|time:"g:i A" }}{% endif %}</b></li>
+                        {% endif %}
+                        <li><i class="fa-solid fa-chess-board"></i> Format: <b>{{ tournament.get_game_format_display }}</b></li>
+                        <li><i class="fa-solid fa-users"></i> Participants: <b>{% if tournament.max_participants %}{{ tournament.max_participants }}{% else %}Unlimited{% endif %}</b></li>
+                        <li><i class="fa-solid fa-ticket"></i> Entry Fee: <b>${{ tournament.entry_fee }}</b></li>
+                        <li><i class="fa-solid fa-trophy"></i> Prize Pool: <b>${{ tournament.prize_pool }}</b></li>
+                    </ul>
+
+                    {% if tournament.description %}
+                    <p>{{ tournament.description|truncatewords:20 }}</p>
+                    {% endif %}
+
+                    <div class="tournament-status">
+                        {% if tournament.status == 'upcoming' %}
+                        <span class="status-badge upcoming">{{ tournament.get_status_display }}</span>
+                        {% elif tournament.status == 'ongoing' %}
+                        <span class="status-badge ongoing">{{ tournament.get_status_display }}</span>
+                        {% elif tournament.status == 'completed' %}
+                        <span class="status-badge completed">{{ tournament.get_status_display }}</span>
+                        {% else %}
+                        <span class="status-badge cancelled">{{ tournament.get_status_display }}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if tournament.registration_link %}
+                    <div class="match-btn mt-3">
+                        <a href="{{ tournament.registration_link }}" target="_blank" rel="noopener" class="theme-btn">
+                            REGISTER <i class="fa-solid fa-arrow-up-right"></i>
+                        </a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <div class="text-center">
+                    <h3>No tournaments have been scheduled yet.</h3>
+                    <p>Please check back soon for upcoming events.</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+    .match-box-items .tournament-meta {
+        margin: 20px 0 0;
+        padding: 0;
+        list-style: none;
+    }
+    .match-box-items .tournament-meta li {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .match-box-items .tournament-meta li i {
+        color: var(--theme, #e8552a);
+    }
+    .match-box-items .tournament-status {
+        margin-top: 18px;
+    }
+    .status-badge {
+        display: inline-block;
+        padding: 6px 16px;
+        border-radius: 30px;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .status-badge.upcoming { background: #e7f1ff; color: #2563eb; }
+    .status-badge.ongoing { background: #e6f7ec; color: #16a34a; }
+    .status-badge.completed { background: #eef0f3; color: #64748b; }
+    .status-badge.cancelled { background: #fde8e8; color: #dc2626; }
+</style>
+
+{% endblock %}

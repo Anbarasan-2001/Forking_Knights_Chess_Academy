@@ -1,0 +1,135 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+        <div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url({% static 'website/assets/img/breadcrumb-bg.jpg' %});">
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">Team Details</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{% url 'home' %}">
+                               Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                          Team Details
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Team Section Start -->
+        <section class="team-details-section fix section-padding">
+            <div class="container">
+                {% if member %}
+                <div class="team-details-wrapper">
+                    <div class="row g-4">
+                        <div class="col-lg-5">
+                            <div class="team-details-image">
+                                <img src="{{ member.photo.url }}" alt="{{ member.name }}">
+                                {% if member.jersey_number %}<h2 class="number">{{ member.jersey_number }}</h2>{% endif %}
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="team-details-content">
+                                <h2>{{ member.name }}</h2>
+                                <span>{{ member.role }}</span>
+                                {% if member.jersey_number %}
+                                <ul>
+                                    <li>NUMBER: <b>{{ member.jersey_number }}</b></li>
+                                </ul>
+                                {% endif %}
+                                {% if member.biography %}
+                                <h3>Biography:</h3>
+                                <p class="mb-4 mt-4">{{ member.biography|linebreaksbr }}</p>
+                                {% endif %}
+                                {% if member.facebook or member.twitter or member.vimeo or member.pinterest %}
+                                <div class="social-icon d-flex align-items-center">
+                                    <span>social Icon:</span>
+                                    {% if member.facebook %}<a href="{{ member.facebook }}" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>{% endif %}
+                                    {% if member.twitter %}<a href="{{ member.twitter }}" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>{% endif %}
+                                    {% if member.vimeo %}<a href="{{ member.vimeo }}" target="_blank" rel="noopener"><i class="fab fa-vimeo-v"></i></a>{% endif %}
+                                    {% if member.pinterest %}<a href="{{ member.pinterest }}" target="_blank" rel="noopener"><i class="fab fa-pinterest-p"></i></a>{% endif %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if members %}
+                <div class="other-members mt-5">
+                    <h3 class="mb-4">Our Team</h3>
+                    <div class="row g-4">
+                        {% for m in members %}
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="our-club-payer-item">
+                                <div class="player-image">
+                                    <img style="width: 100%; height: 320px; object-fit: cover;" src="{{ m.photo.url }}" alt="{{ m.name }}">
+                                    {% if m.jersey_number %}<h2 class="number">{{ m.jersey_number }}</h2>{% endif %}
+                                    <div class="player-content">
+                                        <h4><a href="{% url 'team_details' m.pk %}">{{ m.name }}</a></h4>
+                                        <p>{{ m.role }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+                {% else %}
+                <div class="text-center py-5">
+                    <h2>No team members have been added yet.</h2>
+                    <p>Please check back soon.</p>
+                </div>
+                {% endif %}
+                <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy1.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FL Cup (Carabao Cup)</h3>
+                                <span>2011 / 2012 / 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy2.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FIFA Club World Cup</h3>
+                                <span>2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy3.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FL Cup (Carabao Cup)</h3>
+                                <span>2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy4.png' %}" alt="img">
+                            <div class="content">
+                                <h3>Premier League Trophy</h3>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

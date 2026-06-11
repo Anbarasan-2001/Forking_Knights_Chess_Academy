@@ -1,0 +1,1296 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<!-- Hero Section Start -->
+<section class="hero-section1 parallaxie hero-1 bg-cover" style="background-image: url({% static 'website/assets/img/home-1/slider.png' %});">
+    <!-- <div class="right-shape">
+        <img src="{% static 'website/assets/img/home-1/right-shape.png' %}" alt="img">
+    </div> -->
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h6 class="wow fadeInUp">Official Home of Grandmasters</h6>
+                    <h1 class="hero_title tv_hero_title hero_title_1">
+                        The Heartbeat of <br>
+                        <span>Chess</span> Lives Here
+                    </h1>
+                    <p class="wow fadeInUp" data-wow-delay=".3s">
+                        Welcome to the place where chess is more than just a game—it’s a way of thinking. Every opening, sacrifice, and checkmate sharpens our minds. Here, masters are made, strategy thrives, and the love of the game unites us. Experience the heartbeat of chess—alive in every move, every match, every player.
+                    </p>
+                    <div class="hero-btn wow fadeInUp" data-wow-delay=".5s">
+                        <a href="team.html" class="theme-btn">
+                            Join the Club <i class="fa-solid fa-arrow-up-right"></i>
+                        </a>
+                        <a href="club-ranking.html" class="theme-btn bg-white">
+                            View Tournament Schedule <i class="fa-solid fa-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image">
+                    <img style="max-width: 70%; height: auto;" src="{% static 'website/assets/img/home-1/hero.png' %}" alt="img" class="tilt_scale">
+                    <div class="hero-image-bg">
+                        <img src="{% static 'website/assets/img/home-1/hero-image.png' %}" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Match Result Start -->
+<!-- <div class="match-result-section section-bg wow fadeInUp" data-wow-delay=".3s">
+    <div class="container">
+        <div class="match-result-wrapper">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-1">
+                    <p class="left-headling">
+                        Club Friendly
+                    </p>
+                </div>
+                <div class="col-lg-10">
+                    <div class="swiper match-result-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match1.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match2.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match3.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match4.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match5.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match6.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match7.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match8.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match9.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match10.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="match-result-item">
+                                    <p>
+                                        finished
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match11.png' %}" alt="img">
+                                                CAR
+                                            </span>
+                                            <span class="match-right">
+                                                <span>
+                                                    0
+                                                </span>
+                                                <span>1</span>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="match-left">
+                                                <img src="{% static 'website/assets/img/home-1/match-result/match12.png' %}" alt="img">
+                                                NAK
+                                            </span>
+                                            <span class="match-right">
+                                                <span>02</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                    <div class="arrow-shape">
+                                        <img src="{% static 'website/assets/img/home-1/match-result/arrow-shape.png' %}" alt="img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                    <div class="array-button-2 d-grid mt-0 align-items-center">
+                        <button class="array-prev2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                            <g opacity="0.72">
+                                <path d="M15.814 19.4316C16.2646 19.8822 16.9952 19.8822 17.4458 19.4316C17.8964 18.981 17.8964 18.2504 17.4458 17.7998L16.6299 18.6157L15.814 19.4316ZM3.37029 4.20228C2.73304 4.20228 2.21644 4.71887 2.21644 5.35613L2.21644 15.7407C2.21644 16.378 2.73303 16.8946 3.37029 16.8946C4.00754 16.8946 4.52413 16.378 4.52413 15.7407V6.50997H13.7549C14.3922 6.50997 14.9087 5.99338 14.9087 5.35613C14.9087 4.71887 14.3922 4.20228 13.7549 4.20228L3.37029 4.20228ZM16.6299 18.6157L17.4458 17.7998L4.18618 4.54023L3.37029 5.35613L2.55439 6.17202L15.814 19.4316L16.6299 18.6157Z" fill="#464E5E"/>
+                            </g>
+                            </svg>
+                        </button>
+                        <button class="array-next2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                            <g opacity="0.72">
+                                <path d="M4.56838 15.814C4.11778 16.2646 4.11778 16.9952 4.56838 17.4458C5.01899 17.8964 5.74956 17.8964 6.20017 17.4458L5.38428 16.6299L4.56838 15.814ZM19.7977 3.37029C19.7977 2.73304 19.2811 2.21644 18.6439 2.21644L8.25926 2.21644C7.62201 2.21644 7.10541 2.73303 7.10541 3.37029C7.10541 4.00754 7.62201 4.52413 8.25926 4.52413H17.49V13.7549C17.49 14.3922 18.0066 14.9087 18.6439 14.9087C19.2811 14.9087 19.7977 14.3922 19.7977 13.7549L19.7977 3.37029ZM5.38428 16.6299L6.20017 17.4458L19.4598 4.18618L18.6439 3.37029L17.828 2.55439L4.56838 15.814L5.38428 16.6299Z" fill="#464E5E"/>
+                            </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<!-- Match  Section Start -->
+<section class="match-section fix section-padding">
+    <div class="container">
+        <div class="row g-4 tv-desti-content">
+            {% for tournament in tournaments %}
+            <div class="col-xl-4 col-lg-6 col-md-6">
+                <div class="match-box-items tv-desti-item">
+                    <h3>{{ tournament.name }}</h3>
+                    <h4>{{ tournament.start_date|date:"d M Y" }} &ndash; {{ tournament.end_date|date:"d M Y" }}</h4>
+                    <p>{{ tournament.location }}</p>
+                    <div class="match-schedule">
+                        <div class="flag-item">
+                            <span>{{ tournament.get_game_format_display }}</span>
+                        </div>
+                        <div class="match-date">
+                            <span>{{ tournament.get_status_display }}</span>
+                        </div>
+                        <div class="flag-item">
+                            <span>${{ tournament.prize_pool }}</span>
+                        </div>
+                    </div>
+                    <div class="match-btn">
+                        {% if tournament.registration_link %}
+                        <a href="{{ tournament.registration_link }}" target="_blank" rel="noopener" class="theme-btn">
+                            REGISTER
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none"><path d="M4.1386 14.2597C3.74807 14.6502 3.74807 15.2834 4.1386 15.6739C4.52912 16.0644 5.16229 16.0644 5.55281 15.6739L4.8457 14.9668L4.1386 14.2597ZM17.7793 3.03316C17.7793 2.48088 17.3316 2.03316 16.7793 2.03316L7.77934 2.03316C7.22705 2.03316 6.77934 2.48088 6.77934 3.03316C6.77934 3.58544 7.22706 4.03316 7.77934 4.03316L15.7793 4.03316L15.7793 12.0332C15.7793 12.5854 16.2271 13.0332 16.7793 13.0332C17.3316 13.0332 17.7793 12.5854 17.7793 12.0332L17.7793 3.03316ZM4.8457 14.9668L5.55281 15.6739L17.4864 3.74027L16.7793 3.03316L16.0722 2.32605L4.1386 14.2597L4.8457 14.9668Z" fill="white"/></svg>
+                        </a>
+                        {% endif %}
+                        <a href="{% url 'tournaments' %}" class="theme-btn style-2">
+                            VIEW ALL
+                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="18" viewBox="0 0 21 18" fill="none"><path d="M4.1386 14.2597C3.74807 14.6502 3.74807 15.2834 4.1386 15.6739C4.52912 16.0644 5.16229 16.0644 5.55281 15.6739L4.8457 14.9668L4.1386 14.2597ZM17.7793 3.03316C17.7793 2.48088 17.3316 2.03316 16.7793 2.03316L7.77934 2.03316C7.22705 2.03316 6.77934 2.48088 6.77934 3.03316C6.77934 3.58544 7.22706 4.03316 7.77934 4.03316L15.7793 4.03316L15.7793 12.0332C15.7793 12.5854 16.2271 13.0332 16.7793 13.0332C17.3316 13.0332 17.7793 12.5854 17.7793 12.0332L17.7793 3.03316ZM4.8457 14.9668L5.55281 15.6739L17.4864 3.74027L16.7793 3.03316L16.0722 2.32605L4.1386 14.2597L4.8457 14.9668Z" fill="white"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12">
+                <p class="text-center">No tournaments available right now. Please check back soon.</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- News Section Start -->
+<!-- <section class="club-blog-section fix section-padding bg-cover" style="background-image: url({% static 'website/assets/img/home-1/club-blog/slider1.jpg' %});">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                    <div class="section-title-area align-items-end">
+                    <div class="section-title hero_title tv_hero_title hero_title_1">
+                        <h2>RECENT <span>CLUB</span> NEWS</h2>
+                    </div>
+                    <a href="news.html" class="link-btn wow fadeInUp" data-wow-delay=".3s">
+                        VIEW MORE BLOG <i class="fa-solid fa-arrow-up-right"></i>
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="club-blog-items">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-1/club-blog/blog-1.jpg' %}" alt="img">
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <i class="fa-regular fa-circle-user"></i>
+                                            By <b>Binsro</b>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            June 28, 2025
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3>
+                                    <a href="news-details.html">
+                                        Meet the Coaches Building a Winning Mentality at the Board
+                                    </a>
+                                </h3>
+                                <a href="news-details.html" class="link-btn">
+                                    VIEW MORE BLOG <i class="fa-solid fa-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                        <div class="club-blog-items">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-1/club-blog/blog-2.jpg' %}" alt="img">
+                            </div>
+                            <div class="content">
+                                <ul>
+                                    <li>
+                                        <span>
+                                            <i class="fa-regular fa-circle-user"></i>
+                                            By <b>Binsro</b>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <i class="fa-solid fa-calendar-days"></i>
+                                            June 28, 2025
+                                        </span>
+                                    </li>
+                                </ul>
+                                <h3>
+                                    <a href="news-details.html">
+                                        How to Sharpen Your Opening Repertoire This Season
+                                    </a>
+                                </h3>
+                                <a href="news-details.html" class="link-btn">
+                                    VIEW MORE BLOG <i class="fa-solid fa-arrow-up-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow fadeInUp" data-wow-delay=".7s">
+                <div class="playing-result-box2 style-2">
+                    <h3>RESULTS</h3>
+                    <div class="match-result-box">
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match1.png' %}" alt="img">
+                            </div>
+                            <p>Carlsen</p>
+                        </div>
+                        <div class="content">
+                            <p>August 11, 2023</p>
+                            <div class="result-box">
+                                <h4>05 -02</h4>
+                            </div>
+                        </div>
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match2.png' %}" alt="img">
+                            </div>
+                            <p>Nakamura</p>
+                        </div>
+                    </div>
+                        <div class="match-result-box">
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match3.png' %}" alt="img">
+                            </div>
+                            <p>Carlsen</p>
+                        </div>
+                        <div class="content">
+                            <p>August 11, 2023</p>
+                            <div class="result-box">
+                                <h4>03 -02</h4>
+                            </div>
+                        </div>
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match2.png' %}" alt="img">
+                            </div>
+                            <p>Nakamura</p>
+                        </div>
+                    </div>
+                    <div class="match-result-box mb-0">
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match3.png' %}" alt="img">
+                            </div>
+                            <p>Caruana</p>
+                        </div>
+                        <div class="content">
+                            <p>August 11, 2023</p>
+                            <div class="result-box">
+                                <h4>03 -08</h4>
+                            </div>
+                        </div>
+                        <div class="match-result">
+                            <div class="thumb">
+                                <img src="{% static 'website/assets/img/home-2/match1.png' %}" alt="img">
+                            </div>
+                            <p>Firouzja</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Ranking  Section Start -->
+<section class="ranking-section parallaxie fix section-padding bg-cover" style="background-image: url({% static 'website/assets/img/home-1/ranking/ranking-bg.jpg' %});">
+    <div class="container">
+        <div class="section-title text-center mb-0">
+            <h6 class="wow fadeInUp">FORKING KNIGHTS CHESS ACADEMY RANKINGS</h6>
+            <h2 class="text-white hero_title tv_hero_title hero_title_1">
+                LATEST player  <span>world</span> rankings
+            </h2>
+        </div>
+        <div class="ranking-wrapper">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="ranking-table-1">
+                        <div class="top-content">
+                            <div class="content">
+                                <h3 class="text-white">Men's Rating List</h3>
+                                <p>
+                                    Last update: 03 august 2025
+                                </p>
+                            </div>
+                            <a href="club-ranking.html" class="rank-text">FULL RATING LIST</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                                <thead>
+                            <tr>
+                                <th>RANKING</th>
+                                <th>PLAYER NAME</th>
+                                <th>RATING</th>
+                                <th>+/- POINTS</th>
+                            </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="rank">01</td>
+                                        <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club1.png' %}" alt="img"> Magnus Carlsen</td>
+                                        <td class="points">1885.36</td>
+                                        <td class="pos negative">-0.8</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rank">02</td>
+                                        <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club2.png' %}" alt="img"> Hikaru Nakamura</td>
+                                        <td class="points">1867.09</td>
+                                        <td class="pos positive">+12.45</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rank">03</td>
+                                        <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club3.png' %}" alt="img"> Fabiano Caruana</td>
+                                        <td class="points">1862.03</td>
+                                        <td class="pos positive">+9.32</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rank">04</td>
+                                        <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club4.png' %}" alt="img"> Ding Liren</td>
+                                        <td class="points">1813.32</td>
+                                        <td class="pos negative">-5.88</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="rank">05</td>
+                                        <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club5.png' %}" alt="img"> Alireza Firouzja</td>
+                                        <td class="points">1777.69</td>
+                                        <td class="pos positive">+1.66</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
+                    <div class="ranking-table-1">
+                        <div class="top-content">
+                            <div class="content">
+                                <h3 class="text-white">Women's Rating List</h3>
+                                <p>
+                                    Last update: 03 august 2025
+                                </p>
+                            </div>
+                            <a href="club-ranking.html" class="rank-text">FULL RATING LIST</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table>
+                            <thead>
+                            <tr>
+                                <th>RANKING</th>
+                                <th>PLAYER NAME</th>
+                                <th>RATING</th>
+                                <th>+/- POINTS</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="rank">01</td>
+                                    <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club1.png' %}" alt="img"> Magnus Carlsen</td>
+                                    <td class="points">1885.36</td>
+                                    <td class="pos negative">-0.8</td>
+                                </tr>
+                                <tr>
+                                    <td class="rank">02</td>
+                                    <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club2.png' %}" alt="img"> Hikaru Nakamura</td>
+                                    <td class="points">1867.09</td>
+                                    <td class="pos positive">+12.45</td>
+                                </tr>
+                                <tr>
+                                    <td class="rank">03</td>
+                                    <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club3.png' %}" alt="img"> Fabiano Caruana</td>
+                                    <td class="points">1862.03</td>
+                                    <td class="pos positive">+9.32</td>
+                                </tr>
+                                <tr>
+                                    <td class="rank">04</td>
+                                    <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club4.png' %}" alt="img"> Ding Liren</td>
+                                    <td class="points">1813.32</td>
+                                    <td class="pos negative">-5.88</td>
+                                </tr>
+                                <tr>
+                                    <td class="rank">05</td>
+                                    <td class="club"><img src="{% static 'website/assets/img/home-1/ranking/club5.png' %}" alt="img"> Alireza Firouzja</td>
+                                    <td class="points">1777.69</td>
+                                    <td class="pos positive">+1.66</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section Start -->
+<section class="about-section fix section-padding">
+    <div class="left-shape">
+        <img src="{% static 'website/assets/img/home-1/about/left-shape.png' %}" alt="img">
+    </div>
+    <div class="right-shape">
+        <img src="{% static 'website/assets/img/home-1/about/right-shape.png' %}" alt="img">
+    </div>
+    <div class="container">
+        <div class="about-wrapper">
+            <div class="row g-4">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="about-image">
+                    <img style="max-height: 600px; width: auto; max-width: 100%; object-fit: contain;" src="{% static 'website/assets/img/home-1/about/img.png' %}" alt="img">
+                    <!-- <div class="thumb1">
+                        <img src="{% static 'website/assets/img/home-1/about/about-2.png' %}" alt="img">
+                    </div>
+                    <div class="thumb2">
+                        <img src="{% static 'website/assets/img/home-1/about/about-3.png' %}" alt="img">
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <div class="section-title mb-0">
+                        <h6 class="wow fadeInUp">Built on Strategy. Driven by Discipline.</h6>
+                        <h2 class="hero_title tv_hero_title hero_title_1">
+                            Built on Strategy. Driven by <span>discipline.</span>
+                        </h2>
+                    </div>
+                    <p class="about-text wow fadeInUp" data-wow-delay=".3s">
+                        Founded with a love for the royal game, our chess club has grown into a home for thinkers, competitors, and learners alike. We’re committed to developing talent, sharpening minds,
+                    </p>
+                    <div class="about-list-items wow fadeInUp" data-wow-delay=".5s">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Junior Development Programs
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Weekly Rated Tournaments
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Titled Coaching Staff
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Online & Over-the-Board Play
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="about.html" class="theme-btn wow fadeInUp" data-wow-delay=".7s">
+                        MORE ABOUT US <i class="fa-solid fa-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ticket Section Start -->
+<!-- <section class="ticket-section section-padding bg-cover pb-0" style="background-image: url({% static 'website/assets/img/home-1/tickets-bg.jpg' %});">
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title hero_title tv_hero_title hero_title_1">
+                <h2>
+                    Registration Open – <span>don’t miss</span> the Opening Round
+                </h2>
+            </div>
+            <div class="array-button-2 mt-0 d-flex align-items-center wow fadeInUp" data-wow-delay=".3s">
+                <button class="array-prev2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                    <g opacity="0.72">
+                        <path d="M15.814 19.4316C16.2646 19.8822 16.9952 19.8822 17.4458 19.4316C17.8964 18.981 17.8964 18.2504 17.4458 17.7998L16.6299 18.6157L15.814 19.4316ZM3.37029 4.20228C2.73304 4.20228 2.21644 4.71887 2.21644 5.35613L2.21644 15.7407C2.21644 16.378 2.73303 16.8946 3.37029 16.8946C4.00754 16.8946 4.52413 16.378 4.52413 15.7407V6.50997H13.7549C14.3922 6.50997 14.9087 5.99338 14.9087 5.35613C14.9087 4.71887 14.3922 4.20228 13.7549 4.20228L3.37029 4.20228ZM16.6299 18.6157L17.4458 17.7998L4.18618 4.54023L3.37029 5.35613L2.55439 6.17202L15.814 19.4316L16.6299 18.6157Z" fill="#464E5E"/>
+                    </g>
+                    </svg>
+                </button>
+                <button class="array-next2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                    <g opacity="0.72">
+                        <path d="M4.56838 15.814C4.11778 16.2646 4.11778 16.9952 4.56838 17.4458C5.01899 17.8964 5.74956 17.8964 6.20017 17.4458L5.38428 16.6299L4.56838 15.814ZM19.7977 3.37029C19.7977 2.73304 19.2811 2.21644 18.6439 2.21644L8.25926 2.21644C7.62201 2.21644 7.10541 2.73303 7.10541 3.37029C7.10541 4.00754 7.62201 4.52413 8.25926 4.52413H17.49V13.7549C17.49 14.3922 18.0066 14.9087 18.6439 14.9087C19.2811 14.9087 19.7977 14.3922 19.7977 13.7549L19.7977 3.37029ZM5.38428 16.6299L6.20017 17.4458L19.4598 4.18618L18.6439 3.37029L17.828 2.55439L4.56838 15.814L5.38428 16.6299Z" fill="#464E5E"/>
+                    </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xxl-9">
+                <div class="swiper ticket-box-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="ticket-box-items">
+                                <span class="circle1"></span>
+                                <span class="circle2"></span>
+                                <div class="circle-list">
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                </div>
+                                <div class="ticket-left">
+                                    <p>Mon <br> day</p>
+                                    <span class="number">
+                                        04
+                                    </span>
+                                    <h6>AUGUST</h6>
+                                    <img src="{% static 'website/assets/img/home-1/qr-cord.png' %}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <span>
+                                        <img src="{% static 'website/assets/img/home-1/cup.png' %}" alt="img">
+                                        <b>World Chess Championship, Final</b> Time: 19:05
+                                    </span>
+                                    <p>Venue: Grand Chess Hall</p>
+                                    <div class="match-list">
+                                        <img src="{% static 'website/assets/img/home-1/ticket/match1.png' %}" alt="img">
+                                        <h3>Carlsen — Nakamura</h3>
+                                        <img src="{% static 'website/assets/img/home-1/ticket/match2.png' %}" alt="img">
+                                    </div>
+                                    <a href="ticket.html" class="theme-btn">
+                                    MORE info <i class="fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="ticket-box-items">
+                                <span class="circle1"></span>
+                                <span class="circle2"></span>
+                                <div class="circle-list">
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                    <div class="circle-1"></div>
+                                </div>
+                                <div class="ticket-left">
+                                    <p>Mon <br> day</p>
+                                    <span class="number">
+                                        04
+                                    </span>
+                                    <h6>AUGUST</h6>
+                                    <img src="{% static 'website/assets/img/home-1/qr-cord.png' %}" alt="img">
+                                </div>
+                                <div class="content">
+                                    <span>
+                                        <img src="{% static 'website/assets/img/home-1/cup.png' %}" alt="img">
+                                        <b>World Chess Championship, Final</b> Time: 19:05
+                                    </span>
+                                    <p>Venue: Grand Chess Hall</p>
+                                    <div class="match-list">
+                                        <img src="{% static 'website/assets/img/home-1/ticket/match1.png' %}" alt="img">
+                                        <h3>Carlsen — Nakamura</h3>
+                                        <img src="{% static 'website/assets/img/home-1/ticket/match2.png' %}" alt="img">
+                                    </div>
+                                    <a href="ticket.html" class="theme-btn">
+                                    MORE info <i class="fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-md-7 col-lg-12">
+                <div class="ticket-scaner">
+                    <h3>Scan Your QR Code</h3>
+                    <div class="scaner-thumb">
+                        <img src="{% static 'website/assets/img/home-1/scan.png' %}" alt="img">
+                    </div>
+                    <a href="ticket.html" class="theme-btn">
+                        Season Passes Available <i class="fa-solid fa-arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="counter-section section-padding pb-0">
+            <div class="counter-wrapper tv-desti-content">
+                <div class="counter-items tv-desti-item">
+                    <h6>World Championships</h6>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="{% static 'website/assets/img/home-1/icon/counter-01.svg' %}" alt="img">
+                        </div>
+                        <h2>35</h2>
+                        <p>Trophies</p>
+                    </div>
+                </div>
+                <div class="counter-items tv-desti-item">
+                    <h6>Candidates Titles</h6>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="{% static 'website/assets/img/home-1/icon/counter-02.svg' %}" alt="img">
+                        </div>
+                        <h2>15</h2>
+                        <p>Trophies</p>
+                    </div>
+                </div>
+                <div class="counter-items tv-desti-item">
+                    <h6>Olympiad Golds</h6>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="{% static 'website/assets/img/home-1/icon/counter-03.svg' %}" alt="img">
+                        </div>
+                        <h2>05</h2>
+                        <p>Trophies</p>
+                    </div>
+                </div>
+                <div class="counter-items border-none tv-desti-item">
+                    <h6>Grand Prix Wins</h6>
+                    <div class="icon-box">
+                        <div class="icon">
+                            <img src="{% static 'website/assets/img/home-1/icon/counter-04.svg' %}" alt="img">
+                        </div>
+                        <h2>08</h2>
+                        <p>Trophies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Testimonial  Section Start -->
+<section class="testimonial-section fix section-padding bg-cover" style="background-image: url({% static 'website/assets/img/testimonial/testimonial-bg.jpg' %});">
+    <div class="testimonial-wrapper">
+        <div class="container">
+        <div class="row g-4">
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="swiper tetsimonial-slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                    <div class="testimonial-box-slider">
+                                        <div class="quote-icon">
+                                            <img src="{% static 'website/assets/img/testimonial/quote.svg' %}" alt="img">
+                                        </div>
+                                        <p>
+                                        Joining this club has been incredible — the coaching, the community, the tournaments, everything feels like family. Game nights are electric, and my rating has climbed faster than I ever imagined.
+                                        </p>
+                                        <div class="client-info-items">
+                                            <div class="client-info">
+                                                <img src="{% static 'website/assets/img/testimonial/client.png' %}" alt="img">
+                                                <div class="content">
+                                                    <h4>Daniel Smith</h4>
+                                                    <span>
+                                                        Club Member, 1850 Elo
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-slider">
+                                        <div class="quote-icon">
+                                            <img src="{% static 'website/assets/img/testimonial/quote.svg' %}" alt="img">
+                                        </div>
+                                        <p>
+                                        Joining this club has been incredible — the coaching, the community, the tournaments, everything feels like family. Game nights are electric, and my rating has climbed faster than I ever imagined.
+                                        </p>
+                                        <div class="client-info-items">
+                                            <div class="client-info">
+                                                <img src="{% static 'website/assets/img/testimonial/client.png' %}" alt="img">
+                                                <div class="content">
+                                                    <h4>Daniel Smith</h4>
+                                                    <span>
+                                                        Club Member, 1850 Elo
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-slider">
+                                        <div class="quote-icon">
+                                            <img src="{% static 'website/assets/img/testimonial/quote.svg' %}" alt="img">
+                                        </div>
+                                        <p>
+                                        Joining this club has been incredible — the coaching, the community, the tournaments, everything feels like family. Game nights are electric, and my rating has climbed faster than I ever imagined.
+                                        </p>
+                                        <div class="client-info-items">
+                                            <div class="client-info">
+                                                <img src="{% static 'website/assets/img/testimonial/client.png' %}" alt="img">
+                                                <div class="content">
+                                                    <h4>Daniel Smith</h4>
+                                                    <span>
+                                                        Club Member, 1850 Elo
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="star">
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <div class="testimonial-right-items">
+                        <div class="section-title">
+                            <h6 class="wow fadeInUp">What Our Members Say</h6>
+                            <h2 class="text-white hero_title tv_hero_title hero_title_1">
+                                Loved by Players, <span>coaches,</span> <br> and families
+                            </h2>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                                <div class="testi-count">
+                                    <img src="{% static 'website/assets/img/testimonial/ratting-box.png' %}" alt="img">
+                                </div>
+                                <div class="array-button d-flex align-items-center">
+                                    <button class="array-prev">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                                        <g opacity="0.72">
+                                            <path d="M15.814 19.4316C16.2646 19.8822 16.9952 19.8822 17.4458 19.4316C17.8964 18.981 17.8964 18.2504 17.4458 17.7998L16.6299 18.6157L15.814 19.4316ZM3.37029 4.20228C2.73304 4.20228 2.21644 4.71887 2.21644 5.35613L2.21644 15.7407C2.21644 16.378 2.73303 16.8946 3.37029 16.8946C4.00754 16.8946 4.52413 16.378 4.52413 15.7407V6.50997H13.7549C14.3922 6.50997 14.9087 5.99338 14.9087 5.35613C14.9087 4.71887 14.3922 4.20228 13.7549 4.20228L3.37029 4.20228ZM16.6299 18.6157L17.4458 17.7998L4.18618 4.54023L3.37029 5.35613L2.55439 6.17202L15.814 19.4316L16.6299 18.6157Z" fill="#464E5E"/>
+                                        </g>
+                                        </svg>
+                                    </button>
+                                    <button class="array-next">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                                        <g opacity="0.72">
+                                            <path d="M4.56838 15.814C4.11778 16.2646 4.11778 16.9952 4.56838 17.4458C5.01899 17.8964 5.74956 17.8964 6.20017 17.4458L5.38428 16.6299L4.56838 15.814ZM19.7977 3.37029C19.7977 2.73304 19.2811 2.21644 18.6439 2.21644L8.25926 2.21644C7.62201 2.21644 7.10541 2.73303 7.10541 3.37029C7.10541 4.00754 7.62201 4.52413 8.25926 4.52413H17.49V13.7549C17.49 14.3922 18.0066 14.9087 18.6439 14.9087C19.2811 14.9087 19.7977 14.3922 19.7977 13.7549L19.7977 3.37029ZM5.38428 16.6299L6.20017 17.4458L19.4598 4.18618L18.6439 3.37029L17.828 2.55439L4.56838 15.814L5.38428 16.6299Z" fill="#464E5E"/>
+                                        </g>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                                <div class="image">
+                                    <img src="{% static 'website/assets/img/testimonial/testi-image.jpg' %}" alt="img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Team Section Start -->
+<section class="team-section fix section-padding">
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title hero_title tv_hero_title hero_title_1">
+                <h2>Meet Our <span>Grandmasters</span></h2>
+            </div>
+            <div class="array-button-2 d-flex align-items-center wow fadeInUp" data-wow-delay=".3s">
+                <button class="array-prev2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                    <g opacity="0.72">
+                        <path d="M15.814 19.4316C16.2646 19.8822 16.9952 19.8822 17.4458 19.4316C17.8964 18.981 17.8964 18.2504 17.4458 17.7998L16.6299 18.6157L15.814 19.4316ZM3.37029 4.20228C2.73304 4.20228 2.21644 4.71887 2.21644 5.35613L2.21644 15.7407C2.21644 16.378 2.73303 16.8946 3.37029 16.8946C4.00754 16.8946 4.52413 16.378 4.52413 15.7407V6.50997H13.7549C14.3922 6.50997 14.9087 5.99338 14.9087 5.35613C14.9087 4.71887 14.3922 4.20228 13.7549 4.20228L3.37029 4.20228ZM16.6299 18.6157L17.4458 17.7998L4.18618 4.54023L3.37029 5.35613L2.55439 6.17202L15.814 19.4316L16.6299 18.6157Z" fill="#464E5E"/>
+                    </g>
+                    </svg>
+                </button>
+                <button class="array-next2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                    <g opacity="0.72">
+                        <path d="M4.56838 15.814C4.11778 16.2646 4.11778 16.9952 4.56838 17.4458C5.01899 17.8964 5.74956 17.8964 6.20017 17.4458L5.38428 16.6299L4.56838 15.814ZM19.7977 3.37029C19.7977 2.73304 19.2811 2.21644 18.6439 2.21644L8.25926 2.21644C7.62201 2.21644 7.10541 2.73303 7.10541 3.37029C7.10541 4.00754 7.62201 4.52413 8.25926 4.52413H17.49V13.7549C17.49 14.3922 18.0066 14.9087 18.6439 14.9087C19.2811 14.9087 19.7977 14.3922 19.7977 13.7549L19.7977 3.37029ZM5.38428 16.6299L6.20017 17.4458L19.4598 4.18618L18.6439 3.37029L17.828 2.55439L4.56838 15.814L5.38428 16.6299Z" fill="#464E5E"/>
+                    </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="swiper team-slider">
+            <div class="swiper-wrapper">
+        {% for member in team_members %}
+        <div class="swiper-slide">
+            <div class="our-club-payer-item">
+                <div class="player-image">
+                    <img style="width: 100%; height: 420px; object-fit: cover;" src="{{ member.photo.url }}" alt="{{ member.name }}">
+                    {% if member.jersey_number %}<h2 class="number">{{ member.jersey_number }}</h2>{% endif %}
+                    <div class="player-content">
+                        <h4>
+                            <a href="{% url 'team_details' member.pk %}">{{ member.name }}</a>
+                        </h4>
+                        <p>
+                            {{ member.role }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="swiper-slide">
+            <div class="our-club-payer-item">
+                <div class="player-image">
+                    <div class="player-content">
+                        <h4>No team members added yet.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+</section>
+
+<!-- Sponsor Section Start -->
+<section class="sponsor-section section-padding bg-cover" style="background-image: url({% static 'website/assets/img/home-1/sponsor-bg.jpg' %});">
+    <div class="container">
+            <div class="section-title text-center">
+            <h6 class="wow fadeInUp">our partners</h6>
+            <h2 class="hero_title tv_hero_title hero_title_1">
+                Official Partners & <span>valued</span> sponsors
+            </h2>
+        </div>
+        <div class="sponsor-wrapper-21">
+            <div class="table-responsive">
+                <div class="sponsor-wrap">
+                    <div class="sponsor-box-items">
+                    <div class="sponsor-img bb-none">
+
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s1.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s2.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s3.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s4.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                </div>
+                    <div class="sponsor-box-items">
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s5.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s6.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s7.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s8.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s9.png' %}" alt="img">
+                    </div>
+                </div>
+                <div class="sponsor-box-items">
+                    <div class="sponsor-img bb-none">
+
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s10.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s11.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s12.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                    <div class="sponsor-img">
+                        <img src="{% static 'website/assets/img/home-1/sponsor/s13.png' %}" alt="img">
+                    </div>
+                    <div class="sponsor-img bb-none">
+                        
+                    </div>
+                </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- News Section Start -->
+<section class="news-section fix section-padding pb-0">
+    <div class="container">
+        <div class="section-title-area">
+            <div class="section-title hero_title tv_hero_title hero_title_1">
+                <h2>Highlights That <span>Made History</span></h2>
+            </div>
+            <a href="news.html" class="theme-btn wow fadeInUp" data-wow-delay=".3s">
+                Watch more on Forking Knights Chess Academy TV <i class="fa-solid fa-arrow-up-right"></i>
+            </a>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay=".3s">
+                <div class="news-thumb1">
+                    <img src="{% static 'website/assets/img/home-1/news/news-01.jpg' %}" alt="ing">
+                    <div class="video-box">
+                        <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+                        16:09
+                    </div>
+                    <div class="news-content">
+                        <span>Game Highlights</span>
+                        <ul>
+                            <li>
+                                February 28, 2018
+                            </li>
+                            <li>
+                                /
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                14h
+                            </li>
+                        </ul>
+                        <h3>
+                            <a href="news-details.html">The Immortal Game: A Masterclass in <br> Attacking Chess</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                <div class="news-box-items">
+                    <div class="thumb">
+                        <img src="{% static 'website/assets/img/home-1/news/news-02.jpg' %}" alt="img">
+                        <div class="video-box">
+                        <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+                        16:09
+                    </div>
+                    </div>
+                    <div class="content">
+                        <span>VIDEO </span>
+                        <ul>
+                            <li>
+                                February 28, 2018
+                            </li>
+                            <li>
+                                /
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                14h
+                            </li>
+                        </ul>
+                        <h3>
+                            <a href="news-details.html">Mastering the Sicilian Defense Step by Step</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                <div class="news-box-items">
+                    <div class="thumb">
+                        <img src="{% static 'website/assets/img/home-1/news/news-03.jpg' %}" alt="img">
+                        <div class="video-box">
+                            <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </a>
+                            16:09
+                        </div>
+                    </div>
+                    <div class="content">
+                        <span>Features </span>
+                        <ul>
+                            <li>
+                                February 28, 2018
+                            </li>
+                            <li>
+                                /
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                14h
+                            </li>
+                        </ul>
+                        <h3>
+                            <a href="news-details.html">Player of the Tournament: Best Combinations</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay=".7s">
+                <div class="news-box-items">
+                    <div class="thumb">
+                        <img src="{% static 'website/assets/img/home-1/news/news-04.jpg' %}" alt="img">
+                        <div class="video-box">
+                            <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I" class="video-btn video-popup">
+                                <i class="fa-solid fa-circle-play"></i>
+                            </a>
+                            16:09
+                        </div>
+                    </div>
+                    <div class="content">
+                        <span>VIDEO </span>
+                        <ul>
+                            <li>
+                                February 28, 2018
+                            </li>
+                            <li>
+                                /
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-clock"></i>
+                                14h
+                            </li>
+                        </ul>
+                        <h3>
+                            <a href="news-details.html">Tactical Brilliance: The Coach's Game Plan in Action</a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cta Section Start -->
+<section class="cta-section section-padding">
+    <div class="container">
+        <div class="cta-banner-wrapper bg-cover wow fadeInUp" data-wow-delay=".3s" style="background-image: url({% static 'website/assets/img/home-1/cta-match.jpg' %});">
+            <div class="cta-left">
+                <div class="match-thumb">
+                    <img src="{% static 'website/assets/img/home-1/match.jpg' %}" alt="img">
+                </div>
+                <h2>CARLSEN <span>vs</span> NAKAMURA</h2>
+            </div>
+            <img src="{% static 'website/assets/img/home-1/cta-right.jpg' %}" alt="img" class="right-image">
+            <button type="submit" class="theme-btn">
+                Subscribe now <i class="fa-solid fa-arrow-up-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

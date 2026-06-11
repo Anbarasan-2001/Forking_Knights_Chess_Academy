@@ -1,0 +1,105 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Gallery</h4>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                            <li class="breadcrumb-item active">Gallery</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show material-shadow" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+        {% endif %}
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header border-0 align-items-center d-flex">
+                        <h4 class="card-title mb-0 flex-grow-1">Uploaded Images</h4>
+                        <div class="flex-shrink-0">
+                            <a href="{% url 'gallery_add' %}" class="btn btn-primary">
+                                <i class="ri-add-circle-line align-middle me-1"></i> Add Gallery Image
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            {% for image in images %}
+                            <div class="col-xxl-3 col-lg-4 col-md-6">
+                                <div class="card border material-shadow-none">
+                                    <img src="{{ image.image.url }}" class="card-img-top object-fit-cover"
+                                        style="height: 200px;" alt="{{ image.title }}">
+                                    <div class="card-body">
+                                        <h5 class="card-title fs-15 mb-1 text-truncate">{{ image.title }}</h5>
+                                        <p class="text-muted mb-1 fs-12">
+                                            {% if image.tournament %}<i class="ri-trophy-line"></i> {{ image.tournament.name }}{% else %}<span class="fst-italic">No tournament</span>{% endif %}
+                                        </p>
+                                        <p class="text-muted mb-2">
+                                            <span class="badge bg-primary-subtle text-primary text-uppercase">{{ image.get_category_display }}</span>
+                                            {% if image.is_active %}
+                                            <span class="badge bg-success-subtle text-success">Active</span>
+                                            {% else %}
+                                            <span class="badge bg-secondary-subtle text-secondary">Inactive</span>
+                                            {% endif %}
+                                        </p>
+                                        <div class="d-flex gap-1">
+                                            <a href="{% url 'gallery_edit' image.pk %}"
+                                                class="btn btn-sm btn-soft-info" title="Edit">
+                                                <i class="ri-pencil-fill"></i>
+                                            </a>
+                                            <form method="post" action="{% url 'gallery_toggle' image.pk %}">
+                                                {% csrf_token %}
+                                                <button type="submit"
+                                                    class="btn btn-sm btn-soft-{% if image.is_active %}warning{% else %}success{% endif %}"
+                                                    title="{% if image.is_active %}Set inactive{% else %}Set active{% endif %}">
+                                                    <i class="ri-{% if image.is_active %}pause-circle-fill{% else %}check-line{% endif %}"></i>
+                                                </button>
+                                            </form>
+                                            <form method="post" action="{% url 'gallery_delete' image.pk %}"
+                                                onsubmit="return confirm('Delete image &quot;{{ image.title|escapejs }}&quot;? This cannot be undone.');">
+                                                {% csrf_token %}
+                                                <button type="submit" class="btn btn-sm btn-soft-danger" title="Delete">
+                                                    <i class="ri-delete-bin-fill"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
+                            <div class="col-12">
+                                <div class="text-center text-muted py-4">
+                                    No gallery images yet.
+                                    <a href="{% url 'gallery_add' %}">Upload your first image</a>.
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

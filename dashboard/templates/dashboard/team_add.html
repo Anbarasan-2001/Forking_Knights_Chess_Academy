@@ -1,0 +1,116 @@
+{% extends "dashboard/base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="page-content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">{{ page_title|default:"Add Team Member" }}</h4>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'team_list' %}">Team</a></li>
+                            <li class="breadcrumb-item active">{{ action_label|default:"Add" }}</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-xxl-9">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Member Details</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if form.non_field_errors %}
+                        <div class="alert alert-danger" role="alert">
+                            {% for error in form.non_field_errors %}{{ error }}{% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <form method="post" enctype="multipart/form-data" novalidate>
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-8">
+                                    <label for="{{ form.name.id_for_label }}" class="form-label">Name <span class="text-danger">*</span></label>
+                                    {{ form.name }}
+                                    {% for error in form.name.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="{{ form.role.id_for_label }}" class="form-label">Role <span class="text-danger">*</span></label>
+                                    {{ form.role }}
+                                    {% for error in form.role.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+
+                                {% if instance and instance.photo %}
+                                <div class="col-12">
+                                    <label class="form-label">Current Photo</label>
+                                    <div>
+                                        <img src="{{ instance.photo.url }}" alt="{{ instance.name }}"
+                                            class="rounded object-fit-cover" style="height: 120px;">
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <div class="col-md-8">
+                                    <label for="{{ form.photo.id_for_label }}" class="form-label">
+                                        Photo {% if not instance %}<span class="text-danger">*</span>{% endif %}
+                                    </label>
+                                    {{ form.photo }}
+                                    {% if instance %}<div class="text-muted fs-12 mt-1">Leave empty to keep the current photo.</div>{% endif %}
+                                    {% for error in form.photo.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="{{ form.jersey_number.id_for_label }}" class="form-label">Number</label>
+                                    {{ form.jersey_number }}
+                                    {% for error in form.jersey_number.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+
+                                <div class="col-md-12">
+                                    <label for="{{ form.biography.id_for_label }}" class="form-label">Biography</label>
+                                    {{ form.biography }}
+                                    {% for error in form.biography.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="{{ form.facebook.id_for_label }}" class="form-label">Facebook</label>
+                                    {{ form.facebook }}
+                                    {% for error in form.facebook.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="{{ form.twitter.id_for_label }}" class="form-label">Twitter</label>
+                                    {{ form.twitter }}
+                                    {% for error in form.twitter.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="{{ form.vimeo.id_for_label }}" class="form-label">Vimeo</label>
+                                    {{ form.vimeo }}
+                                    {% for error in form.vimeo.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="{{ form.pinterest.id_for_label }}" class="form-label">Pinterest</label>
+                                    {{ form.pinterest }}
+                                    {% for error in form.pinterest.errors %}<div class="text-danger fs-12 mt-1">{{ error }}</div>{% endfor %}
+                                </div>
+
+                                <div class="col-12 text-end">
+                                    <a href="{% url 'team_list' %}" class="btn btn-light">Cancel</a>
+                                    <button type="submit" class="btn btn-primary">
+                                        <i class="ri-save-line align-middle me-1"></i> {{ submit_label|default:"Save Member" }}
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

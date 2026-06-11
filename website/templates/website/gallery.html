@@ -1,0 +1,86 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url({% static 'website/assets/img/breadcrumb-bg.jpg' %});">
+    <div class="container">
+        <div class="gt-page-heading">
+            <div class="gt-breadcrumb-sub-title">
+                <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">Our Gallery</h1>
+            </div>
+            <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li>
+                    <a href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    Our Gallery
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Section Start -->
+<div class="gallery-section fix section-padding">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#all" data-bs-toggle="tab" class="nav-link active">
+                    all <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            {% for tournament in gallery_tournaments %}
+            <li class="nav-item">
+                <a href="#tournament-{{ tournament.id }}" data-bs-toggle="tab" class="nav-link">
+                    {{ tournament.name }} ({{ tournament.start_date|date:"M Y" }}) <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+        <div class="tab-content">
+            <div id="all" class="tab-pane fade show active">
+                <div class="row g-4">
+                    {% for image in gallery_images %}
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img style="width: 100%; height: 300px; object-fit: cover;" src="{{ image.image.url }}" alt="{{ image.title }}">
+                            <a href="{{ image.image.url }}" class="gt-icon" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="col-12">
+                        <p class="text-center">No gallery images have been uploaded yet.</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% for tournament in gallery_tournaments %}
+            <div id="tournament-{{ tournament.id }}" class="tab-pane fade">
+                <div class="row g-4">
+                    {% for image in gallery_images %}
+                    {% if image.tournament_id == tournament.id %}
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img style="width: 100%; height: 300px; object-fit: cover;" src="{{ image.image.url }}" alt="{{ image.title }}">
+                            <a href="{{ image.image.url }}" class="gt-icon" target="_blank" rel="noopener">
+                                <i class="fa-solid fa-magnifying-glass-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

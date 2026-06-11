@@ -1,0 +1,293 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url('{% static 'website/assets/img/breadcrumb-bg.jpg' %}');">
+    <div class="container">
+        <div class="gt-page-heading">
+            <div class="gt-breadcrumb-sub-title">
+                <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">Our Gallery</h1>
+            </div>
+            <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                <li>
+                    <a href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </li>
+                <li>
+                    Our Gallery
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Gallery Section Start -->
+<div class="gallery-section fix section-padding">
+    <div class="container">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="#all" data-bs-toggle="tab" class="nav-link active">
+                    all <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#PLAYER" data-bs-toggle="tab" class="nav-link">
+                    PLAYER <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#championship" data-bs-toggle="tab" class="nav-link">
+                    championship <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#coach" data-bs-toggle="tab" class="nav-link">
+                    coach <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#goalkeepers" data-bs-toggle="tab" class="nav-link">
+                    goalkeepers <i class="fa-solid fa-arrow-up-right"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div id="all" class="tab-pane fade show active">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g1.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g2.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g3.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g4.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g5.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g6.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="PLAYER" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g1.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g2.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g3.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g4.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g5.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g6.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="championship" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g1.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g2.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g3.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g4.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g5.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g6.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="coach" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g1.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g2.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g3.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g4.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g5.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g6.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="goalkeepers" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g1.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g2.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g3.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g4.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-6 col-md-6">
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g5.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="gallery-thumb-inner">
+                            <img src="{% static 'website/assets/img/inner/gallery/g6.jpg' %}" alt="img">
+                            <a href="#" class="gt-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+      
+{% endblock %}

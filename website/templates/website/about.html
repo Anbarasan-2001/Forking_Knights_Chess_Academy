@@ -1,0 +1,364 @@
+{% extends 'website/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- Breadcrumb / Page Header Start -->
+        <div class="gt-breadcrumb-wrapper bg-cover" style="background-image: url({% static 'website/assets/img/breadcrumb-bg.jpg' %});">
+            <div class="container">
+                <div class="gt-page-heading">
+                    <div class="gt-breadcrumb-sub-title">
+                        <h1 class="text-white wow fadeInUp" data-wow-delay=".3s">about us</h1>
+                    </div>
+                    <ul class="gt-breadcrumb-items wow fadeInUp" data-wow-delay=".5s">
+                        <li>
+                            <a href="{% url 'home' %}">
+                               Home
+                            </a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </li>
+                        <li>
+                           about us
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+       <!-- About Section Start -->
+        <section class="about-section fix section-padding">
+            <!-- <div class="left-shape">
+                <img src="{% static 'website/assets/img/home-1/about/left-shape.png' %}" alt="img">
+            </div>
+            <div class="right-shape">
+                <img src="{% static 'website/assets/img/home-1/about/right-shape.png' %}" alt="img">
+            </div> -->
+            <div class="container">
+                <div class="about-wrapper">
+                    <div class="row g-4">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
+                        <div class="about-image">
+                            <img style="width: 100%; height: 100%; object-fit: cover;" src="{% static 'website/assets/img/Knightsicon.jpeg' %}" alt="img">
+                            <!-- <div class="thumb1">
+                                <img src="{% static 'website/assets/img/home-1/about/about-2.png' %}" alt="img">
+                            </div>
+                            <div class="thumb2">
+                                <img src="{% static 'website/assets/img/home-1/about/about-3.png' %}" alt="img">
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-title mb-0">
+                                <h6 class="wow fadeInUp">Built on Passion. Driven by Unity.</h6>
+                                <h2 class="hero_title tv_hero_title hero_title_1">
+                                    Built on. Driven by Unity. <span>passion.</span> NEWS
+                                </h2>
+                            </div>
+                            <p class="about-text wow fadeInUp" data-wow-delay=".3s">
+                                Founded with the spirit of teamwork and dedication, our football club has grown into a symbol of pride, unity, and excellence. We’re committed to developing talent, inspiring fans,
+                            </p>
+                           <div class="about-list-items wow fadeInUp" data-wow-delay=".5s">
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        outh Development Programs
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        outh Development Programs
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        Award-Winning Coaching Staff
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-circle-check"></i>
+                                        State-of-the-Art Training 
+                                    </li>
+                                </ul>
+                           </div>
+                           <a href="about.html" class="theme-btn wow fadeInUp" data-wow-delay=".7s">
+                               MORE ABOUT US <i class="fa-solid fa-arrow-up-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trophy-section section-padding pt-0">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy1.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FL Cup (Carabao Cup)</h3>
+                                <span>2011 / 2012 / 2015</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy2.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FIFA Club World Cup</h3>
+                                <span>2019</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".6s">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy3.png' %}" alt="img">
+                            <div class="content">
+                                <h3>FL Cup (Carabao Cup)</h3>
+                                <span>2021</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay=".8s">
+                        <div class="trophy-box-item">
+                            <img src="{% static 'website/assets/img/inner/trophy4.png' %}" alt="img">
+                            <div class="content">
+                                <h3>Premier League Trophy</h3>
+                                <span>2023</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section Start -->
+        <section class="testimonial-section-4 fix bg-cover " style="background-image: url('website/assets/img/inner/testimonial-bg.jpg');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="swiper testimonial-slider-3">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-4">
+                                        <h3>
+                                            Coach James has transformed our team with his tactical genius and motivational leadership. His commitment to player growth, discipline, and unity has brought us unforgettable victories and a winning mindset."
+                                        </h3>
+                                        <div class="client-info">
+                                            <img src="{% static 'website/assets/img/inner/client.png' %}" alt="img">
+                                            <div class="info-content">
+                                                <h4>Daniel SmithDaniel Smith</h4>
+                                                <p>general coach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-4">
+                                        <h3>
+                                            Coach James has transformed our team with his tactical genius and motivational leadership. His commitment to player growth, discipline, and unity has brought us unforgettable victories and a winning mindset."
+                                        </h3>
+                                        <div class="client-info">
+                                            <img src="{% static 'website/assets/img/inner/client.png' %}" alt="img">
+                                            <div class="info-content">
+                                                <h4>Daniel SmithDaniel Smith</h4>
+                                                <p>general coach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="testimonial-box-4">
+                                        <h3>
+                                            Coach James has transformed our team with his tactical genius and motivational leadership. His commitment to player growth, discipline, and unity has brought us unforgettable victories and a winning mindset."
+                                        </h3>
+                                        <div class="client-info">
+                                            <img src="{% static 'website/assets/img/inner/client.png' %}" alt="img">
+                                            <div class="info-content">
+                                                <h4>Daniel SmithDaniel Smith</h4>
+                                                <p>general coach</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0">
+                         <div class="testimonial-image">
+                            <img src="{% static 'website/assets/img/inner/testimonial-image.jpg' %}" alt="img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section Start -->
+        <section class="team-section fix section-padding">
+            <div class="container">
+                <div class="section-title-area">
+                    <div class="section-title hero_title tv_hero_title hero_title_1">
+                        <h2>Meet Our <span>Founders</span></h2>
+                    </div>
+                    <div class="array-button-2 d-flex align-items-center wow fadeInUp" data-wow-delay=".3s">
+                        <button class="array-prev2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
+                            <g opacity="0.72">
+                                <path d="M15.814 19.4316C16.2646 19.8822 16.9952 19.8822 17.4458 19.4316C17.8964 18.981 17.8964 18.2504 17.4458 17.7998L16.6299 18.6157L15.814 19.4316ZM3.37029 4.20228C2.73304 4.20228 2.21644 4.71887 2.21644 5.35613L2.21644 15.7407C2.21644 16.378 2.73303 16.8946 3.37029 16.8946C4.00754 16.8946 4.52413 16.378 4.52413 15.7407V6.50997H13.7549C14.3922 6.50997 14.9087 5.99338 14.9087 5.35613C14.9087 4.71887 14.3922 4.20228 13.7549 4.20228L3.37029 4.20228ZM16.6299 18.6157L17.4458 17.7998L4.18618 4.54023L3.37029 5.35613L2.55439 6.17202L15.814 19.4316L16.6299 18.6157Z" fill="#464E5E"/>
+                            </g>
+                            </svg>
+                        </button>
+                        <button class="array-next2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="20" viewBox="0 0 24 20" fill="none">
+                            <g opacity="0.72">
+                                <path d="M4.56838 15.814C4.11778 16.2646 4.11778 16.9952 4.56838 17.4458C5.01899 17.8964 5.74956 17.8964 6.20017 17.4458L5.38428 16.6299L4.56838 15.814ZM19.7977 3.37029C19.7977 2.73304 19.2811 2.21644 18.6439 2.21644L8.25926 2.21644C7.62201 2.21644 7.10541 2.73303 7.10541 3.37029C7.10541 4.00754 7.62201 4.52413 8.25926 4.52413H17.49V13.7549C17.49 14.3922 18.0066 14.9087 18.6439 14.9087C19.2811 14.9087 19.7977 14.3922 19.7977 13.7549L19.7977 3.37029ZM5.38428 16.6299L6.20017 17.4458L19.4598 4.18618L18.6439 3.37029L17.828 2.55439L4.56838 15.814L5.38428 16.6299Z" fill="#464E5E"/>
+                            </g>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper team-slider">
+                 <div class="swiper-wrapper">
+                {% for member in team_members %}
+                <div class="swiper-slide">
+                    <div class="our-club-payer-item">
+                        <div class="player-image">
+                            <img style="width: 100%; height: 420px; object-fit: cover;" src="{{ member.photo.url }}" alt="{{ member.name }}">
+                            {% if member.jersey_number %}<h2 class="number">{{ member.jersey_number }}</h2>{% endif %}
+                            <div class="player-content">
+                                <h4>
+                                    <a href="{% url 'team_details' member.pk %}">{{ member.name }}</a>
+                                </h4>
+                                <p>
+                                    {{ member.role }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="swiper-slide">
+                    <div class="our-club-payer-item">
+                        <div class="player-image">
+                            <div class="player-content">
+                                <h4>No team members added yet.</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            </div>
+        </section>
+
+         <!-- Sponsor Section Start -->
+        <section class="sponsor-section section-padding bg-cover" style="background-image: url('website/assets/img/home-1/sponsor-bg.jpg');">
+            <div class="container">
+                 <div class="section-title text-center">
+                    <h6 class="wow fadeInUp">online store</h6>
+                    <h2 class="hero_title tv_hero_title hero_title_1">
+                        Official Partners & <span>valued</span> sponsors
+                    </h2>
+                </div>
+                <div class="sponsor-wrapper-21">
+                    <div class="table-responsive">
+                        <div class="sponsor-wrap">
+                            <div class="sponsor-box-items">
+                            <div class="sponsor-img bb-none">
+
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s1.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s2.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s3.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s4.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                        </div>
+                         <div class="sponsor-box-items">
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s5.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                               
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s6.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                               
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s7.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                               
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s8.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                               
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s9.png' %}" alt="img">
+                            </div>
+                        </div>
+                        <div class="sponsor-box-items">
+                            <div class="sponsor-img bb-none">
+
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s10.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s11.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s12.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                            <div class="sponsor-img">
+                                <img src="{% static 'website/assets/img/home-1/sponsor/s13.png' %}" alt="img">
+                            </div>
+                            <div class="sponsor-img bb-none">
+                                
+                            </div>
+                        </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+      
+
+{% endblock %}
